@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Machine test</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    	a {
+    		text-decoration: none;
+    	}
+
+    </style>
+</head>
+<body>
+	<ul >
+		<!-- country lists -->
+		<li><a onclick="showHideKerala()" id="Kerala"  href="#" >Kerala</a></li>
+		<li><a onclick="showHideTamil()" id="Tamil nadu" href="#">Tamil nadu</a></li>
+		<li><a onclick="showHideMaharastra()" id="Maharastra" href="#">Maharastra</a></li>
+		<li><a onclick="showHideKarnataka()" id="Karnataka" href="#">Karnataka</a></li>
+		<li><a onclick="showHideGoa()" id="Goa" href="#">Goa</a></li>
+	</ul>
+	 <!-- button for add * to the end -->
+	<button onclick="addValue()">Click Here!</button>
+	<br>
+	<!-- section for arrays -->
+	<p id="array1"></p>
+	<p id="array"></p>
+
+    <script type="text/javascript">
+        // functions to show capital city
+    	function showHideKerala() {
+    		var x = document.getElementById("Kerala").innerHTML;
+    		if(x === 'Kerala') {
+    			document.getElementById("Kerala").innerHTML = "Trivandrum";
+    		}
+               
+             else {
+             	document.getElementById("Kerala").innerHTML = "Kerala";
+             }
+    		
+    	}
+    	function showHideTamil() {
+    		var x = document.getElementById("Tamil nadu").innerHTML;
+    		if(x === 'Tamil nadu') {
+    			document.getElementById("Tamil nadu").innerHTML = "Chennai";
+    		}
+               
+             else {
+             	document.getElementById("Tamil nadu").innerHTML = "Tamil nadu";
+             }
+    		
+    	}
+    	function showHideMaharastra() {
+    		var x = document.getElementById("Maharastra").innerHTML;
+    		if(x === 'Maharastra') {
+    			document.getElementById("Maharastra").innerHTML = "Mumbai";
+    		}
+               
+             else {
+             	document.getElementById("Maharastra").innerHTML = "Maharastra";
+             }
+    		
+    	}
+    	function showHideKarnataka() {
+    		var x = document.getElementById("Karnataka").innerHTML;
+    		if(x === 'Karnataka') {
+    			document.getElementById("Karnataka").innerHTML = "Bangloor";
+    		}
+               
+             else {
+             	document.getElementById("Karnataka").innerHTML = "Karnataka";
+             }
+    		
+    	}
+    	function showHideGoa() {
+    		var x = document.getElementById("Goa").innerHTML;
+    		if(x === 'Goa') {
+    			document.getElementById("Goa").innerHTML = "Panaji";
+    		}
+               
+             else {
+             	document.getElementById("Goa").innerHTML = "Goa";
+             }
+    		
+    	}
+    	// function to add * to the end of states
+    	function addValue() {
+             document.getElementById("Kerala").innerHTML ="Kerala*";
+             document.getElementById("Tamil nadu").innerHTML ="Tamil nadu*";
+             document.getElementById("Maharastra").innerHTML ="Maharastra*";
+             document.getElementById("Karnataka").innerHTML ="Karnataka*";
+             document.getElementById("Goa").innerHTML ="Goa*";
+    
+
+    	}
+        // function for array doubling and printing desc order
+    	var arr = [2, 4, 6, 8, 10];
+           document.getElementById("array1").innerHTML = arr;
+    	var arr2 = arr.map(myFunction)
+    	           .sort(function(a, b){return b - a});
+    	document.getElementById("array").innerHTML = arr2;
+    	function myFunction(value) {
+    	     return value * 2;
+    	     
+    	}
+        
+
+    </script>
+</body>
+</html>
